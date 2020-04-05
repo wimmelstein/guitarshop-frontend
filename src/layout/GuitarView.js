@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
 
-class GuitarsView extends Component {
+class GuitarView extends Component {
 
     constructor(props) {
         super(props);
@@ -28,10 +28,10 @@ class GuitarsView extends Component {
     render() {
         return (
             <div>
-                <Grid container spacing={24} alignItems={'center'}>
+                <Grid container spacing={0} alignItems={'center'}>
                     {this.state.guitars.map((guitar) => (
-                        <Grid item xs={12} sm={6} lg={4} xl={12}>
-                            <Guitar key={guitar.id} guitar={guitar} />
+                        <Grid key={guitar.id} item xs={12} sm={6} lg={4} xl={12}>
+                            <Guitar guitar={guitar  } />
                         </Grid>
 
                     ))}
@@ -41,8 +41,8 @@ class GuitarsView extends Component {
     }
 }
 
-GuitarsView.propTypes = {
+GuitarView.propTypes = {
     guitars: PropTypes.array.isRequired,
 };
 
-export default GuitarsView;
+export default GuitarView;

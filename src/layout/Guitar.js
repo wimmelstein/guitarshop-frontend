@@ -67,7 +67,7 @@ class Guitar extends Component {
                             helperText=" "
                         />
                         <Button variant="outlined" style={{
-                            backgroundColor: '#ffede8',
+                            backgroundColor: '#ddd',
                             color: '#000'
                         }}>+</Button>
                     </CardActions>
