@@ -42,7 +42,7 @@ class Guitar extends Component {
 
     render() {
 
-        const {brand, model} = this.props.guitar;
+        const {brand, model, price} = this.props.guitar;
         return (
 
             <Card className={classes.card}>
@@ -51,13 +51,13 @@ class Guitar extends Component {
                     <Typography className={classes.title} color="secondary">
                         {brand}
                     </Typography>
-
-                    <Typography variant="h5" component="h2">
+                    <Typography variant="h4" component="h2">
                         {model}
                     </Typography>
-
+                    <Typography variant="h3">
+                        &euro; {price}
+                    </Typography>
                     </CardContent>
-
                     <CardActions style={{display: 'flex',
                                         justifyContent: 'space-between'}}>
                         <TextField

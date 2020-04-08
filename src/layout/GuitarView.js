@@ -21,17 +21,17 @@ class GuitarView extends Component {
             }).then((jsonResult) => {
                 this.setState({ guitars: jsonResult })
             }).catch(err => {
-                this.setState({ guitars: [{id:0, brand: "Error", model:  "No results found"}]})
+                this.setState({ guitars: [{id:0, brand: "Error", model:  "No results found", price: 0}]})
             })
     }
 
     render() {
         return (
             <div>
-                <Grid container spacing={0} alignItems={'center'}>
+                <Grid container spacing={1} alignItems={'center'}>
                     {this.state.guitars.map((guitar) => (
-                        <Grid key={guitar.id} item xs={12} sm={6} lg={4} xl={12}>
-                            <Guitar guitar={guitar  } />
+                        <Grid key={guitar.id} item xs={12} sm={6} lg={4} xl={2}>
+                            <Guitar guitar={guitar} />
                         </Grid>
 
                     ))}
